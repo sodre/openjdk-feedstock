@@ -7,4 +7,6 @@ gcc \
 	-L$JAVA_HOME/jre/lib/amd64/server 	\
 	-ljvm					\
 	-o vmtest				\
-	vmtest.c 
+	test-jni/vmtest.c 
+	
+vmtest
