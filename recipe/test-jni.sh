@@ -8,5 +8,4 @@ gcc \
 	-ljvm					\
 	-o vmtest				\
 	test-jni/vmtest.c 
-	
-vmtest
+./vmtest
