@@ -1,9 +1,10 @@
 #!/bin/bash
 
+os=$(uname -s | tr '[:upper:]' '[:lower:]')
 set -e
 gcc \
 	-I$JAVA_HOME/include 			\
-	-I$JAVA_HOME/include/linux 		\
+	-I$JAVA_HOME/include/$os		\
 	-L$JAVA_HOME/jre/lib/amd64/server 	\
 	-ljvm					\
 	-o vmtest				\
