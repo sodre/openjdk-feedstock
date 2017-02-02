@@ -1,2 +1,10 @@
 export JAVA_HOME_CONDA_BACKUP=$JAVA_HOME
 export JAVA_HOME=$CONDA_PREFIX
+if [ uname -s == 'Darwin' ]; then
+    export JAVA_DYLD_LIBRARY_PATH_BACKUP=$JAVA_DYLD_LIBRARY_PATH
+    export JAVA_DYLD_LIBRARY_PATH=$CONDA_PREFIX/jre/lib/server
+else
+    export JAVA_LD_LIBRARY_PATH_BACKUP=$JAVA_LD_LIBRARY_PATH
+    export JAVA_LD_LIBRARY_PATH=$CONDA_PREFIX/jre/lib/amd64/server
+fi
+
